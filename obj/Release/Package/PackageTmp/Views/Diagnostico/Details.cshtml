@@ -1,0 +1,76 @@
+﻿@model Sistema_Leucemia_v2.Models.Diagnostico
+
+@{
+    ViewBag.Seccion = "Diagnósticos y tratamientos";
+    ViewBag.SeccionL = "";
+    ViewBag.Subseccion1 = "Diagnósticos";
+    ViewBag.Subseccion1L = " Diagnostico ";
+    ViewBag.Descripcion = "";
+    ViewBag.Subseccion = "Detalles del Diagnóstico";
+
+}
+
+<div class="col-lg-12">
+    <!-- Avatar Sizing-->
+    <div id="sizing">
+        <div class="card mb-12">
+            <div class="card-header">@Html.Display("Subseccion")</div>
+            <div class="card-body">
+                <!-- Component Preview-->
+
+                <div>
+
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Paciente.dni)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Paciente.dni)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Personal.dni)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Personal.dni)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.nombre)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.nombre)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.condicion)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.condicion)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.observacion)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.observacion)
+                        </dd>
+
+                    </dl>
+                </div>
+                <p>
+                    
+                    <a class="btn btn-cyan me-2 my-1" href="~/Diagnostico/Index"><b><i data-feather="arrow-left-circle"></i>  Regresar</b></a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <!-- Avatar Status Indicators-->
+
+</div>

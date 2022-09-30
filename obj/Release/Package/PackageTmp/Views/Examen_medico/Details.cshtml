@@ -1,0 +1,100 @@
+﻿@model Sistema_Leucemia_v2.Models.Examen_medico
+
+@{
+    ViewBag.Seccion = "Exámenes médicos";
+    ViewBag.SeccionL = "Examen_medico";
+    ViewBag.Subseccion1 = "";
+    ViewBag.Subseccion1L = " ";
+    ViewBag.Descripcion = "";
+    ViewBag.Subseccion = "Detalles del Examen médico ";
+
+}
+
+<div class="col-lg-12">
+    <!-- Avatar Sizing-->
+    <div id="sizing">
+        <div class="card mb-12">
+            <div class="card-header">@Html.Display("Subseccion")</div>
+            <div class="card-body">
+                <!-- Component Preview-->
+
+                <div>
+
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Diagnostico.nombre)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Diagnostico.nombre)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.estado)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.estado)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.fecha_encargo)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.fecha_encargo)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.nombre)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.nombre)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.area)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.area)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.encargado)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.encargado)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.fecha_resultado)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.fecha_resultado)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.resultado)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.resultado)
+                        </dd>
+
+                    </dl>
+                </div>
+                <p>
+                    
+                    <a class="btn btn-cyan me-2 my-1" href="~/Examen_medico/Index"><b><i data-feather="arrow-left-circle"></i>  Regresar</b></a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <!-- Avatar Status Indicators-->
+
+</div>

@@ -1,0 +1,82 @@
+﻿@model IEnumerable<Sistema_Leucemia_v2.Models.Sintoma>
+
+@{
+    ViewBag.Seccion = "Síntomas";
+    ViewBag.SeccionL = "Sintoma";
+    ViewBag.Subseccion1 = "";
+    ViewBag.Subseccion1L = "";
+    ViewBag.Descripcion = "";
+    ViewBag.Subseccion = "Listar Síntomas";
+
+}
+
+<div class="col-lg-12">
+    <!-- Avatar Sizing-->
+    <div id="sizing">
+        <div class="card mb-12">
+            <div class="card-header">@Html.Display("Subseccion")</div>
+            <div class="card-body">
+                <!-- Component Preview-->
+
+                <p>
+                    <a class="btn btn-teal me-2 my-1" href="~/Sintoma/Create"><b>Registrar</b></a>
+                </p>
+                <table class="table" id="datatablesSimple">
+                    <thead>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.nombre)</th>
+                            <th>@Html.DisplayNameFor(model => model.tipo)</th>
+                            <th>@Html.DisplayNameFor(model => model.descripcion)</th>
+                            <th>@Html.DisplayNameFor(model => model.estado)</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.nombre)</th>
+                            <th>@Html.DisplayNameFor(model => model.tipo)</th>
+                            <th>@Html.DisplayNameFor(model => model.descripcion)</th>
+                            <th>@Html.DisplayNameFor(model => model.estado)</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </tfoot>
+
+
+
+                    <tbody>
+
+
+
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.nombre)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.tipo)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.descripcion)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.estado)
+                                </td>
+                                <td>
+                                    <a class="btn btn-indigo btn-xs" href="~/Sintoma/Edit/@item.idSintoma"><i data-feather="edit"></i>Editar</a>
+                                    <a class="btn btn-yellow btn-xs" href="~/Sintoma/Details/@item.idSintoma"><i data-feather="more-vertical"></i>Detalles</a>
+
+                                </td>
+
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <!-- Avatar Status Indicators-->
+
+</div>

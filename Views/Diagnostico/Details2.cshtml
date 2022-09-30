@@ -1,0 +1,210 @@
+﻿@model Sistema_Leucemia_v2.Models.Paciente
+
+@{
+    ViewBag.Seccion = "Diagnósticos y tratamientos";
+    ViewBag.SeccionL = "";
+    ViewBag.Subseccion1 = "Diagnósticos";
+    ViewBag.Subseccion1L = " Diagnostico ";
+    ViewBag.Descripcion = "";
+    ViewBag.Subseccion = "Generar Diagnóstico";
+
+}
+
+<div class="col-lg-9">
+   
+        <div class="row">
+            <!-- Default Bootstrap Datos Personales-->
+            <div class="col-lg-6">
+                <div id="datosPersonales">
+                    <div class="card mb-4">
+                        <div class="card-header">Datos Personales del Paciente</div>
+                        <div class="card-body">
+                            <!-- Component Preview-->
+                            <div>
+                                <p><b>DNI:</b> @Html.DisplayFor(model => model.dni)</p>
+                                <p><b>Nombre completo:</b> @Html.DisplayFor(model => model.nombres) @Html.DisplayFor(model => model.ap_paterno)  @Html.DisplayFor(model => model.ap_materno) </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <!-- Default Bootstrap Diagnóstico-->
+                <div id="diagnostico">
+                    <div class="card mb-4">
+                        <div class="card-header">Diagnóstico del Paciente</div>
+                        <div class="card-body">
+                            <!-- Component Preview-->
+                            <div>
+                                <p><b>Nombre: </b>Diagnóstico </p>
+                                <p><b>Condición: </b> En espera</p>
+                                <p><b>Observación: </b>Ninguna </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+   
+        <!-- Default Bootstrap Sintomas-->
+        <div id="sintomas">
+            <div class="card mb-4">
+                <div class="card-header">Síntomas del Paciente</div>
+                <div class="card-body">
+                    <!-- Component Preview-->
+                    <div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nombre</th>
+                                    <th>Tipo</th>
+                                    <th>Descripción</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            <tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Default Bootstrap Síndrome genético-->
+        <div id="sindrome">
+            <div class="card mb-4">
+                <div class="card-header">Síndrome genético del Paciente</div>
+                <div class="card-body">
+                    <!-- Component Preview-->
+                    <div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nombre</th>
+                                    <th>Grado</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            <tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Default Bootstrap Condiciones previas-->
+        <div id="condiciones">
+            <div class="card mb-4">
+                <div class="card-header">Condiciones previas del Paciente</div>
+                <div class="card-body">
+                    <!-- Component Preview-->
+                    <div>
+                        <div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Ant.Familiar</th>
+                                        <th>Radiación</th>
+                                        <th>Tabaquismo</th>
+                                        <th>Sust.Química</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                <tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Default Bootstrap Tratamientos previos-->
+        <div id="tratamientos">
+            <div class="card mb-4">
+                <div class="card-header">Tratamientos previos del Paciente</div>
+                <div class="card-body">
+                    <!-- Component Preview-->
+                    <div>
+                        <div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nombre</th>
+                                        <th>Grado</th>
+                                        <th>Grado elevado</th>
+                                        <th>F.Inicio</th>
+                                        <th>F.Fin</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                <tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Default Bootstrap Diagnóstico-->
+
+
+    </div>
+    <!-- Sticky Navigation-->
+<div class="col-lg-3">
+    <div class="nav-sticky">
+        <div class="card">
+            <div class="card-body">
+                <ul class="nav flex-column" id="stickyNav">
+                    <li class="nav-item"><a class="nav-link" href="#datosPersonales">Datos Personales</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#diagnosticos">Diagnóstico</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sintomas">Síntomas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sindrome">Síndrome genético</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#condiciones">Condiciones previas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tratamientos">Tratamientos previos</a></li>
+                </ul>
+            </div>
+        </div>
+        <br />
+        <button class="btn btn-green me-2 my-1" type="button"><b>GENERAR</b></button>
+
+    </div>
+</div>
+
+<div>
+    <a class="btn btn-cyan me-2 my-1" href="~/Diagnostico/Index"><b><i data-feather="arrow-left-circle"></i>  Regresar</b></a>
+</div>
+

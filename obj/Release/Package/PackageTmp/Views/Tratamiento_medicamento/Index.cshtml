@@ -1,0 +1,95 @@
+﻿@model IEnumerable<Sistema_Leucemia_v2.Models.Tratamiento_medicamento>
+
+@{
+    ViewBag.Seccion = "Tratamientos de medicamentos";
+    ViewBag.SeccionL = "Tratamiento_medicamento";
+    ViewBag.Descripcion = "";
+    ViewBag.Subseccion = "Lista de Tratamientos de medicamentos";
+}
+
+
+<div class="col-lg-12">
+    <!-- Avatar Sizing-->
+    <div id="sizing">
+        <div class="card mb-12">
+            <div class="card-header">@Html.Display("Subseccion")</div>
+            <div class="card-body">
+                <!-- Component Preview-->
+
+                <p>
+                    <a class="btn btn-teal me-2 my-1" href="~/Paciente/Create"><b>Registrar</b></a>
+                </p>
+                <table class="table" id="datatablesSimple">
+                    <thead>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.Medicamento.nombre)</th>
+                            <th>@Html.DisplayNameFor(model => model.Tratamiento.etapa)</th>
+                            <th>@Html.DisplayNameFor(model => model.cantidad)</th>
+                            <th>@Html.DisplayNameFor(model => model.medida)</th>
+                            <th>@Html.DisplayNameFor(model => model.recurrencia)</th>
+                            <th>@Html.DisplayNameFor(model => model.fecha_inicio)</th>
+                            <th>@Html.DisplayNameFor(model => model.fecha_fin)</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.Medicamento.nombre)</th>
+                            <th>@Html.DisplayNameFor(model => model.Tratamiento.etapa)</th>
+                            <th>@Html.DisplayNameFor(model => model.cantidad)</th>
+                            <th>@Html.DisplayNameFor(model => model.medida)</th>
+                            <th>@Html.DisplayNameFor(model => model.recurrencia)</th>
+                            <th>@Html.DisplayNameFor(model => model.fecha_inicio)</th>
+                            <th>@Html.DisplayNameFor(model => model.fecha_fin)</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </tfoot>
+
+
+
+                    <tbody>
+
+
+
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Medicamento.nombre)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Tratamiento.etapa)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.cantidad)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.medida)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.recurrencia)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.fecha_inicio)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.fecha_fin)
+                                </td>
+
+                                <td>
+                                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                                </td>
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <!-- Avatar Status Indicators-->
+
+</div>

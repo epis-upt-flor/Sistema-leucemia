@@ -1,0 +1,107 @@
+﻿@model IEnumerable<Sistema_Leucemia_v2.Models.Paciente>
+
+@{
+    ViewBag.Seccion = "Condiciones previas";
+    ViewBag.SeccionL = "";
+    ViewBag.Subseccion1 = "Condiciones previas";
+    ViewBag.Subseccion1L = "Condicion_previa";
+    ViewBag.Descripcion = "";
+    ViewBag.Subseccion = "Lista de Condiciones Previas";
+
+}
+
+<div class="col-lg-12">
+    <!-- Avatar Sizing-->
+    <div id="sizing">
+        <div class="card mb-12">
+            <div class="card-header">@Html.Display("Subseccion")</div>
+            <div class="card-body">
+                <!-- Component Preview-->
+                <div>
+                    <a class="btn btn-teal me-2 my-1" href="~/Condicion_previa/Create"><b>Registrar</b></a>
+                </div>
+                <table class="table" id="datatablesSimple">
+                    <thead>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.dni)</th>
+                            <th>@Html.DisplayNameFor(model => model.hc)</th>
+                            <th>@Html.DisplayNameFor(model => model.nombres)</th>
+                            <th>Apellidos</th>
+                            <th>@Html.DisplayNameFor(model => model.sexo)</th>
+                            <th>Edad</th>
+                            <th>Ant.Familiar</th>
+                            <th>Radiación</th>
+                            <th>Tabaquismo</th>
+                            <th>Sust.Química</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.dni)</th>
+                            <th>@Html.DisplayNameFor(model => model.hc)</th>
+                            <th>@Html.DisplayNameFor(model => model.nombres)</th>
+                            <th>Apellidos</th>
+                            <th>@Html.DisplayNameFor(model => model.sexo)</th>
+                            <th>Edad</th>
+                            <th>Ant.Familiar</th>
+                            <th>Radiación</th>
+                            <th>Tabaquismo</th>
+                            <th>Sust.Química</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </tfoot>
+
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.dni)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.hc)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.nombres)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ap_paterno) @Html.DisplayFor(modelItem => item.ap_materno)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.sexo)
+                                </td>
+                                <td>
+                                    22
+                                </td>
+                                <td>
+                                    Sí
+                                </td>
+                                <td>
+                                    No
+                                </td>
+                                <td>
+                                    No
+                                </td>
+                                <td>
+                                    No
+                                </td>
+                                <td>
+                                    
+                                    <a class="btn btn-indigo btn-xs" href="~/Condicion_previa/Edit/@item.idPaciente"><i data-feather="edit"></i>Editar</a>
+                                    <a class="btn btn-yellow btn-xs" href="~/Condicion_previa/Details2/@item.idPaciente"><i data-feather="more-vertical"></i>Detalles</a>
+
+
+                                </td>
+
+                            </tr>
+                        }
+                    <tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <!-- Avatar Status Indicators-->
+
+</div>

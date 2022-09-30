@@ -1,0 +1,91 @@
+﻿@model Sistema_Leucemia_v2.Models.Tsugerido_Medicamento
+
+@{
+    ViewBag.Seccion = "Tratamientos sugeridos";
+    ViewBag.SeccionL = "";
+    ViewBag.Subseccion1 = "Medicamentos del tratamiento sugerido";
+    ViewBag.Subseccion1L = " Tsugerido_medicamento ";
+    ViewBag.Descripcion = "";
+    ViewBag.Subseccion = "Detalles de los Medicamentos del tratamiento sugerido ";
+
+}
+
+<div class="col-lg-12">
+    <!-- Avatar Sizing-->
+    <div id="sizing">
+        <div class="card mb-12">
+            <div class="card-header">@Html.Display("Subseccion")</div>
+            <div class="card-body">
+                <!-- Component Preview-->
+
+                <div>
+
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Tratamiento_sugerido.duracion)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Tratamiento_sugerido.duracion)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.codigo_med)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.codigo_med)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.cantidad)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.cantidad)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.medida)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.medida)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.recurrencia)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.recurrencia)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.fecha_inicio)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.fecha_inicio)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.fecha_fin)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.fecha_fin)
+                        </dd>
+
+                    </dl>
+                </div>
+                <p>
+                    <a class="btn btn-cyan me-2 my-1" href="~/Diagnostico/Index"><b><i data-feather="arrow-left-circle"></i>  Regresar</b></a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <!-- Avatar Status Indicators-->
+
+</div>

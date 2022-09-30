@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="Model1-Web.config Connection String" description="Model1 Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="data source=(LocalDb)\MSSQLLocalDB;initial catalog=Sistema_Leucemia_v2.Models.Model1;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Cursos\ UPT\\Construcción\ de\ software\\2022-ii\\Proyecto\\Sistema_Leucemia_v2\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Model1']/@connectionString" />
+  </parameter>
+  <parameter name="DatosLeucemia-Web.config Connection String" description="DatosLeucemia Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="data source=serveruso.database.windows.net;initial catalog=db_leucemia;persist security info=True;user id=adminad;password=Estandar753;MultipleActiveResultSets=True;App=EntityFramework" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Cursos\ UPT\\Construcción\ de\ software\\2022-ii\\Proyecto\\Sistema_Leucemia_v2\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DatosLeucemia']/@connectionString" />
+  </parameter>
+</parameters>

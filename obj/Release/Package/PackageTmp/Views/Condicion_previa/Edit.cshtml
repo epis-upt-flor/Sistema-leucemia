@@ -1,0 +1,95 @@
+﻿@model Sistema_Leucemia_v2.Models.Condicion_previa
+
+@{
+    ViewBag.Seccion = "Condiciones previas";
+    ViewBag.SeccionL = "";
+    ViewBag.Subseccion1 = "Condiciones previas";
+    ViewBag.Subseccion1L = "Condicion_previa";
+    ViewBag.Descripcion = "";
+    ViewBag.Subseccion = "Editar Condiciones Previas ";
+
+}
+<div class="col-lg-12">
+    <!-- Avatar Sizing-->
+    <div id="sizing">
+        <div class="card mb-12">
+            <div class="card-header">@Html.Display("Subseccion")</div>
+            <div class="card-body">
+                <!-- Component Preview-->
+
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-horizontal">
+
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        @Html.HiddenFor(model => model.idCondicion_previa)
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.antecedente_familiar, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.antecedente_familiar, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.antecedente_familiar, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.radiacion, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                <div class="checkbox">
+                                    @Html.EditorFor(model => model.radiacion)
+                                    @Html.ValidationMessageFor(model => model.radiacion, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.tabaquismo, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                <div class="checkbox">
+                                    @Html.EditorFor(model => model.tabaquismo)
+                                    @Html.ValidationMessageFor(model => model.tabaquismo, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.sustancia_quimica, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                <div class="checkbox">
+                                    @Html.EditorFor(model => model.sustancia_quimica)
+                                    @Html.ValidationMessageFor(model => model.sustancia_quimica, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.idPaciente, "idPaciente", htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.DropDownList("idPaciente", null, htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.idPaciente, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <button class="btn btn-indigo me-2 my-1" type="submit"><i data-feather="save"></i>  <b>  Actualizar</b></button>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                <div>
+                    <a class="btn btn-cyan me-2 my-1" href="~/Condicion_previa/Index"><b><i data-feather="arrow-left-circle"></i>  Regresar</b></a>
+                </div>
+
+                
+            </div>
+
+        </div>
+    </div>
+    <!-- Avatar Status Indicators-->
+
+</div>

@@ -1,0 +1,141 @@
+﻿@model Sistema_Leucemia_v2.Models.Paciente
+
+@{
+    ViewBag.Seccion = "Condiciones previas";
+    ViewBag.SeccionL = "";
+    ViewBag.Subseccion1 = "Condiciones previas";
+    ViewBag.Subseccion1L = "Condicion_previa";
+    ViewBag.Descripcion = "";
+    ViewBag.Subseccion = "Detalles de las Condiciones Previas ";
+
+}
+
+<div class="col-lg-9">
+
+
+
+    <!-- Default Bootstrap Sintomas-->
+    <div id="dato">
+        <div class="card mb-4">
+            <div class="card-header">Datos personales</div>
+            <div class="card-body">
+                <!-- Component Preview-->
+                <div>
+                    <p><b>DNI:</b> @Html.DisplayFor(model => model.dni)</p>
+                    <p><b>Nombre completo:</b> @Html.DisplayFor(model => model.nombres) @Html.DisplayFor(model => model.ap_paterno)  @Html.DisplayFor(model => model.ap_materno) </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Default Bootstrap Condiciones previas-->
+    <div id="condicion">
+        <div class="card mb-4">
+            <div class="card-header">Condiciones previas</div>
+            <div class="card-body">
+                <!-- Component Preview-->
+                <div>
+                    <p><b>Antecedentes familiares: </b>Sí </p>
+                    <p><b>Radiación: </b> No</p>
+                    <p><b>Tabaquismo: </b>No </p>
+                    <p><b>Sustancia química: </b>No </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Default Bootstrap Sintomas-->
+    <div id="sindrome">
+        <div class="card mb-4">
+            <div class="card-header">Síndromes genéticos</div>
+            <div class="card-body">
+                <!-- Component Preview-->
+                <div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Grado</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        <tbody>
+                    </table>
+                    <button class="btn btn-teal" type="button">Agregar Síndrome</button>
+                    <button class="btn btn-red" type="button">Quitar Síndrome</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Default Bootstrap Tratamientos previos-->
+    <div id="tratamiento">
+        <div class="card mb-4">
+            <div class="card-header">Tratamientos previos</div>
+            <div class="card-body">
+                <!-- Component Preview-->
+                <div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Grado</th>
+                                <th>Grado elevado</th>
+                                <th>F.Inicio</th>
+                                <th>F.Fin</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        <tbody>
+                    </table>
+                    <button class="btn btn-indigo" type="button">Ir a Tratamientos previos</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+<!-- Sticky Navigation-->
+<div class="col-lg-3">
+    <div class="nav-sticky">
+        <div class="card">
+            <div class="card-body">
+                <ul class="nav flex-column" id="stickyNav">
+                    <li class="nav-item"><a class="nav-link" href="#dato">Datos Personales</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#condicion">Condición previa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sindrome">Síndromes genéticos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tratamiento">Tratamientos previos </a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div>
+    <a class="btn btn-cyan me-2 my-1" href="~/Condicion_previa/Index"><b><i data-feather="arrow-left-circle"></i>  Regresar</b></a>
+</div>
+
+
+

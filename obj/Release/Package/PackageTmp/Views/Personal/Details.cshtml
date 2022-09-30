@@ -1,0 +1,139 @@
+﻿@model Sistema_Leucemia_v2.Models.Personal
+
+@{
+    ViewBag.Seccion = "Personal";
+    ViewBag.SeccionL = "Personal";
+    ViewBag.Subseccion1 = "";
+    ViewBag.Subseccion1L = "";
+    ViewBag.Descripcion = "";
+    ViewBag.Subseccion = "Detalles del Personal";
+
+}
+
+<div class="col-lg-12">
+    <!-- Avatar Sizing-->
+    <div id="sizing">
+        <div class="card mb-12">
+            <div class="card-header">@Html.Display("Subseccion")</div>
+            <div class="card-body">
+                <!-- Component Preview-->
+
+                <div>
+
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.dni)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.dni)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.nombres)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.nombres)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.apellidos)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.apellidos)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.tipo)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.tipo)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.sexo)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.sexo)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.fecha_nac)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.fecha_nac)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.turno)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.turno)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.celular)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.celular)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.email)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.email)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.estado)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.estado)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.usuario)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.usuario)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.clave)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.clave)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.perfil)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.perfil)
+                        </dd>
+
+                    </dl>
+                </div>
+                <p>
+                    <a class="btn btn-cyan me-2 my-1" href="~/Personal/Index"><b><i data-feather="arrow-left-circle"></i>  Regresar</b></a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <!-- Avatar Status Indicators-->
+
+</div>

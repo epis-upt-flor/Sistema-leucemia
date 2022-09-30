@@ -1,0 +1,119 @@
+﻿@model Sistema_Leucemia_v2.Models.Paciente
+
+@{
+    ViewBag.Seccion = "Control de sangre";
+    ViewBag.SeccionL = "Control_sangre";
+    ViewBag.Subseccion1 = "";
+    ViewBag.Subseccion1L = "";
+    ViewBag.Descripcion = "";
+    ViewBag.Subseccion = "Controles de Sangre del paciente";
+
+}
+
+<div class="col-lg-9">
+
+    <div class="row">
+        <!-- Default Bootstrap Datos Personales-->
+        <div class="col-lg-6">
+            <div id="datosPersonales">
+                <div class="card mb-4">
+                    <div class="card-header">Datos Personales del Paciente</div>
+                    <div class="card-body">
+                        <!-- Component Preview-->
+                        <div>
+                            <p><b>DNI:</b> @Html.DisplayFor(model => model.dni)</p>
+                            <p><b>Nombre completo:</b> @Html.DisplayFor(model => model.nombres) @Html.DisplayFor(model => model.ap_paterno)  @Html.DisplayFor(model => model.ap_materno) </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <!-- Default Bootstrap Diagnóstico-->
+            <div id="diagnostico">
+                <div class="card mb-4">
+                    <div class="card-header">Diagnóstico del Paciente</div>
+                    <div class="card-body">
+                        <!-- Component Preview-->
+                        <div>
+                            <p><b>Nombre: </b>Diagnóstico </p>
+                            <p><b>Condición: </b> En espera</p>
+                            <p><b>Observación: </b>Ninguna </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Default Bootstrap Sintomas-->
+    <div id="control">
+        <div class="card mb-4">
+            <div class="card-header">Controles de sangre</div>
+            <div class="card-body">
+                <!-- Component Preview-->
+                <div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Fecha</th>
+                                <th>Leucocitos</th>
+                                <th>EMR</th>
+                                <th>Hemoglobina</th>
+                                <th>Plaquetas</th>
+                                <th>Linfoblasto</th>
+                                <th>Neutrofilos</th>
+                                <th>Editar</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <a class="btn btn-indigo btn-xs" href="~/Control_sangre/Edit/@Html.DisplayFor(model => model.idPaciente)"><i data-feather="edit"></i> Editar </a>
+                                </td>
+                            </tr>
+                        <tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+</div>
+<!-- Sticky Navigation-->
+<div class="col-lg-3">
+    <div class="nav-sticky">
+        <div class="card">
+            <div class="card-body">
+                <ul class="nav flex-column" id="stickyNav">
+                    <li class="nav-item"><a class="nav-link" href="#datosPersonales">Datos Personales</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#diagnosticos">Diagnóstico</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#control">Controles de Sangre</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div>
+    <a class="btn btn-cyan me-2 my-1" href="~/Control_sangre/Index"><b><i data-feather="arrow-left-circle"></i>  Regresar</b></a>
+</div>
+
+
+

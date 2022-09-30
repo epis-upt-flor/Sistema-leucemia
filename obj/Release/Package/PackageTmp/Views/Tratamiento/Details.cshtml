@@ -1,0 +1,83 @@
+﻿@model Sistema_Leucemia_v2.Models.Tratamiento
+
+@{
+    ViewBag.Seccion = "Diagnósticos y tratamientos";
+    ViewBag.SeccionL = "";
+    ViewBag.Subseccion1 = "Tratamientos";
+    ViewBag.Subseccion1L = " Tratamiento ";
+    ViewBag.Descripcion = "";
+    ViewBag.Subseccion = "Detalles del Tratamiento";
+
+}
+
+<div class="col-lg-12">
+    <!-- Avatar Sizing-->
+    <div id="sizing">
+        <div class="card mb-12">
+            <div class="card-header">@Html.Display("Subseccion")</div>
+            <div class="card-body">
+                <!-- Component Preview-->
+
+                <div>
+
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Diagnostico.nombre)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Diagnostico.nombre)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.etapa)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.etapa)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.protocolo)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.protocolo)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.fecha_inicio)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.fecha_inicio)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.fecha_fin)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.fecha_fin)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.observacion)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.observacion)
+                        </dd>
+
+                    </dl>
+                </div>
+                <p>
+                    <a class="btn btn-cyan me-2 my-1" href="~/Diagnostico/Index"><b><i data-feather="arrow-left-circle"></i>  Regresar</b></a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <!-- Avatar Status Indicators-->
+
+</div>

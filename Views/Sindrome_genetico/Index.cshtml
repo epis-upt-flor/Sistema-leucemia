@@ -1,0 +1,72 @@
+﻿@model IEnumerable<Sistema_Leucemia_v2.Models.Sindrome_genetico>
+
+@{
+    ViewBag.Seccion = "Síndromes genéticos";
+    ViewBag.SeccionL = "Síndrome_genetico";
+    ViewBag.Subseccion1 = "";
+    ViewBag.Subseccion1L = "";
+    ViewBag.Descripcion = "";
+    ViewBag.Subseccion = "Listar Síndromes genéticos";
+
+}
+
+<div class="col-lg-12">
+    <!-- Avatar Sizing-->
+    <div id="sizing">
+        <div class="card mb-12">
+            <div class="card-header">@Html.Display("Subseccion")</div>
+            <div class="card-body">
+                <!-- Component Preview-->
+
+                <p>
+                    <a class="btn btn-teal me-2 my-1" href="~/Sindrome_genetico/Create"><b>Registrar</b></a>
+                </p>
+                <table class="table" id="datatablesSimple">
+                    <thead>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.nombre)</th>
+                            <th>@Html.DisplayNameFor(model => model.grado)</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.nombre)</th>
+                            <th>@Html.DisplayNameFor(model => model.grado)</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </tfoot>
+
+
+
+                    <tbody>
+
+
+
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.nombre)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.grado)
+                                </td>
+                                <td>
+                                    <a class="btn btn-indigo btn-xs" href="~/Sindrome_genetico/Edit/@item.idSindrome_genetico"><i data-feather="edit"></i>Editar</a>
+                                    <a class="btn btn-yellow btn-xs" href="~/Sindrome_genetico/Details/@item.idSindrome_genetico"><i data-feather="more-vertical"></i>Detalles</a>
+
+                                </td>
+
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <!-- Avatar Status Indicators-->
+
+</div>

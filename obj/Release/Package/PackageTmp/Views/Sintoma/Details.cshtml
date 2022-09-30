@@ -1,0 +1,68 @@
+﻿@model Sistema_Leucemia_v2.Models.Sintoma
+
+@{
+    ViewBag.Seccion = "Síntomas";
+    ViewBag.SeccionL = "Sintoma";
+    ViewBag.Subseccion1 = "";
+    ViewBag.Subseccion1L = "";
+    ViewBag.Descripcion = "";
+    ViewBag.Subseccion = "Detalles de los Sintomas";
+
+}
+
+
+<div class="col-lg-12">
+    <!-- Avatar Sizing-->
+    <div id="sizing">
+        <div class="card mb-12">
+            <div class="card-header">@Html.Display("Subseccion")</div>
+            <div class="card-body">
+                <!-- Component Preview-->
+
+                <div>
+
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.nombre)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.nombre)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.tipo)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.tipo)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.descripcion)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.descripcion)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.estado)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.estado)
+                        </dd>
+
+                    </dl>
+                </div>
+                <p>
+                    <a class="btn btn-cyan me-2 my-1" href="~/Sintoma/Index"><b><i data-feather="arrow-left-circle"></i>  Regresar</b></a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <!-- Avatar Status Indicators-->
+
+</div>

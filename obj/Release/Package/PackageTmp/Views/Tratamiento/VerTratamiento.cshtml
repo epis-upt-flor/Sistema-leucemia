@@ -1,0 +1,130 @@
+﻿@model Sistema_Leucemia_v2.Models.Paciente
+
+@{
+    ViewBag.Seccion = "Diagnósticos y tratamientos";
+    ViewBag.SeccionL = "";
+    ViewBag.Subseccion1 = "Tratamientos";
+    ViewBag.Subseccion1L = " Tratamiento ";
+    ViewBag.Descripcion = "";
+    ViewBag.Subseccion = "Detalles del Tratamiento";
+}
+
+
+<div class="col-lg-9">
+    <div class="row">
+        <!-- Default Bootstrap Datos Personales-->
+        <div class="col-lg-6">
+            <div id="datosPersonales">
+                <div class="card mb-4">
+                    <div class="card-header">Datos Personales del Paciente</div>
+                    <div class="card-body">
+                        <!-- Component Preview-->
+                        <div>
+                            <p><b>DNI:</b> @Html.DisplayFor(model => model.dni)</p>
+                            <p><b>Nombre completo:</b> @Html.DisplayFor(model => model.nombres) @Html.DisplayFor(model => model.ap_paterno)  @Html.DisplayFor(model => model.ap_materno) </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <!-- Default Bootstrap Diagnóstico-->
+            <div id="diagnostico">
+                <div class="card mb-4">
+                    <div class="card-header">Diagnóstico del Paciente</div>
+                    <div class="card-body">
+                        <!-- Component Preview-->
+                        <div>
+                            <p><b>Nombre: </b>Diagnóstico </p>
+                            <p><b>Condición: </b> En espera</p>
+                            <p><b>Observación: </b>Ninguna </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Default Bootstrap Sintomas-->
+    <div id="tratamiento">
+        <div class="card mb-4">
+            <div class="card-header">Tratamiento</div>
+            <div class="card-body">
+                <!-- Component Preview-->
+                <div>
+                    <p><b>Etapa: </b>Etapa 1 </p>
+                    <p><b>Protocolo: </b> Protocolo A</p>
+                    <p><b>F.Inicio: </b>22/05/2022 </p>
+                    <p><b>F.Fin: </b>22/12/2022 </p>
+                    <p><b>Observación: </b>Ninguna </p>
+
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    <!-- Default Bootstrap Condiciones previas-->
+    <div id="medicamentos">
+        <div class="card mb-4">
+            <div class="card-header">Medicamentos del tratamiento </div>
+            <div class="card-body">
+                <!-- Component Preview-->
+                <div>
+                    <div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Medicamento</th>
+                                    <th>Cantidad</th>
+                                    <th>Medida</th>
+                                    <th>Recurrencia</th>
+                                    <th>F.Inicio</th>
+                                    <th>F.Fin</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            <tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</div>
+<!-- Sticky Navigation-->
+<div class="col-lg-3">
+    <div class="nav-sticky">
+        <div class="card">
+            <div class="card-body">
+                <ul class="nav flex-column" id="stickyNav">
+                    <li class="nav-item"><a class="nav-link" href="#datosPersonales">Datos Personales</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#diagnostico">Diagnóstico</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tratamiento">Tratamiento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#medicamentos">Medicamentos del tratamiento</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<p>
+    <a class="btn btn-cyan me-2 my-1" href="~/Tratamiento/Index"><b><i data-feather="arrow-left-circle"></i>  Regresar</b></a>
+</p>

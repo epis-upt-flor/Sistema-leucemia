@@ -1,0 +1,99 @@
+﻿@model IEnumerable<Sistema_Leucemia_v2.Models.Paciente>
+
+@{
+    ViewBag.Seccion = "Paciente";
+    ViewBag.SeccionL = " Paciente ";
+    ViewBag.Subseccion1 = "";
+    ViewBag.Subseccion1L = "";
+    ViewBag.Descripcion = "";
+    ViewBag.Subseccion = "Lista de Pacientes";
+
+}
+
+
+<div class="col-lg-12">
+    <!-- Avatar Sizing-->
+    <div id="sizing">
+        <div class="card mb-12">
+            <div class="card-header">@Html.Display("Subseccion")</div>
+            <div class="card-body">
+                <!-- Component Preview-->
+                <div>
+                    <a class="btn btn-teal me-2 my-1" href="~/Paciente/Create"><b>Registrar</b></a>
+                </div>
+
+                <table class="table" id="datatablesSimple">
+                    <thead>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.dni)</th>
+                            <th>@Html.DisplayNameFor(model => model.hc)</th>
+                            <th>@Html.DisplayNameFor(model => model.nombres)</th>
+                            <th>@Html.DisplayNameFor(model => model.ap_paterno)</th>
+                            <th>@Html.DisplayNameFor(model => model.ap_materno)</th>
+                            <th>@Html.DisplayNameFor(model => model.sexo)</th>
+                            <th>@Html.DisplayNameFor(model => model.fecha_nac)</th>
+                            <th>@Html.DisplayNameFor(model => model.estado)</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.dni)</th>
+                            <th>@Html.DisplayNameFor(model => model.hc)</th>
+                            <th>@Html.DisplayNameFor(model => model.nombres)</th>
+                            <th>@Html.DisplayNameFor(model => model.ap_paterno)</th>
+                            <th>@Html.DisplayNameFor(model => model.ap_materno)</th>
+                            <th>@Html.DisplayNameFor(model => model.sexo)</th>
+                            <th>@Html.DisplayNameFor(model => model.fecha_nac)</th>
+                            <th>@Html.DisplayNameFor(model => model.estado)</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </tfoot>
+
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.dni)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.hc)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.nombres)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ap_paterno)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ap_materno)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.sexo)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.fecha_nac)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.estado)
+                                </td>
+                                <td>
+                                    <a class="btn btn-indigo btn-xs" href="~/Paciente/Edit/@item.idPaciente"><i data-feather="edit"></i>Editar</a>
+                                    <a class="btn btn-yellow btn-xs" href="~/Paciente/Details/@item.idPaciente"><i data-feather="more-vertical"></i>Detalles</a>
+                                    <!--
+        <a class="btn btn-red btn-xs" href="~/Paciente/Delete/item.idPaciente"><i data-feather="trash-2"></i>Eliminar</a>
+    -->
+                                </td>
+
+                            </tr>
+                        }
+                    <tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <!-- Avatar Status Indicators-->
+
+</div>

@@ -1,0 +1,76 @@
+﻿@model Sistema_Leucemia_v2.Models.Condicion_previa
+
+@{
+    ViewBag.Seccion = "Condiciones previas";
+    ViewBag.SeccionL = "";
+    ViewBag.Subseccion1 = "Condiciones previas";
+    ViewBag.Subseccion1L = "Condicion_previa";
+    ViewBag.Descripcion = "";
+    ViewBag.Subseccion = "Detalles de las Condiciones Previas ";
+
+}
+
+<div class="col-lg-12">
+    <!-- Avatar Sizing-->
+    <div id="sizing">
+        <div class="card mb-12">
+            <div class="card-header">@Html.Display("Subseccion")</div>
+            <div class="card-body">
+                <!-- Component Preview-->
+
+                <div>
+
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Paciente.dni)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Paciente.dni)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.antecedente_familiar)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.antecedente_familiar)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.radiacion)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.radiacion)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.tabaquismo)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.tabaquismo)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.sustancia_quimica)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.sustancia_quimica)
+                        </dd>
+
+                    </dl>
+                </div>
+                <p>
+                    
+                    <a class="btn btn-cyan me-2 my-1" href="~/Diagnostico/Index"><b><i data-feather="arrow-left-circle"></i>  Regresar</b></a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <!-- Avatar Status Indicators-->
+
+</div>

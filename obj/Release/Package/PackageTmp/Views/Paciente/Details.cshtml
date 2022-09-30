@@ -1,0 +1,344 @@
+﻿@model Sistema_Leucemia_v2.Models.Paciente
+
+@{
+    ViewBag.Seccion = "Pacientes";
+    ViewBag.SeccionL = "Paciente";
+    ViewBag.Descripcion = "";
+    ViewBag.Subseccion = "Detalles del Paciente";
+}
+
+<div class="col-lg-9">
+    <!-- Default Bootstrap Datos Personales-->
+    <div id="datosPersonales">
+        <div class="card mb-4">
+            <div class="card-header">Datos Personales del Paciente</div>
+            <div class="card-body">
+                <!-- Component Preview-->
+                <div>
+
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.dni)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.dni)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.hc)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.hc)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.nombres)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.nombres)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ap_paterno)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.ap_paterno)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ap_materno)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.ap_materno)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.sexo)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.sexo)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.fecha_nac)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.fecha_nac)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.procedencia)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.procedencia)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.distrito)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.distrito)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.residencia)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.residencia)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.direccion)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.direccion)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.direc_referencia)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.direc_referencia)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.celular)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.celular)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.email)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.email)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.estado)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.estado)
+                        </dd>
+
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Default Bootstrap Sintomas-->
+    <div id="sintomas">
+        <div class="card mb-4">
+            <div class="card-header">Síntomas del Paciente</div>
+            <div class="card-body">
+                <!-- Component Preview-->
+                <div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Tipo</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        <tbody>
+                    </table>
+                    <button class="btn btn-teal" type="button">Agregar Síntoma</button>
+                    <button class="btn btn-red" type="button">Quitar Síntoma</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Default Bootstrap Síndrome genético-->
+    <div id="sindrome">
+        <div class="card mb-4">
+            <div class="card-header">Síndrome genético del Paciente</div>
+            <div class="card-body">
+                <!-- Component Preview-->
+                <div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Grado</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        <tbody>
+                    </table>
+                    <button class="btn btn-indigo" type="button">Ir a Síndromes genéticos</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Default Bootstrap Condiciones previas-->
+    <div id="condiciones">
+        <div class="card mb-4">
+            <div class="card-header">Condiciones previas del Paciente</div>
+            <div class="card-body">
+                <!-- Component Preview-->
+                <div>
+                    <div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Ant.Familiar</th>
+                                    <th>Radiación</th>
+                                    <th>Tabaquismo</th>
+                                    <th>Sust.Química</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            <tbody>
+                        </table>
+                        <button class="btn btn-indigo" type="button">Ir a Condiciones previas</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Default Bootstrap Tratamientos previos-->
+    <div id="tratamientos">
+        <div class="card mb-4">
+            <div class="card-header">Tratamientos previos del Paciente</div>
+            <div class="card-body">
+                <!-- Component Preview-->
+                <div>
+                    <div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nombre</th>
+                                    <th>Grado</th>
+                                    <th>Grado elevado</th>
+                                    <th>F.Inicio</th>
+                                    <th>F.Fin</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            <tbody>
+                        </table>
+                        <button class="btn btn-indigo" type="button">Ir a Tratamientos previos</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Default Bootstrap Diagnóstico-->
+    <div id="diagnostico">
+        <div class="card mb-4">
+            <div class="card-header">Diagnóstico del Paciente</div>
+            <div class="card-body">
+                <!-- Component Preview-->
+                <div>
+                    <div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Acciones</th>
+                                    <th>Acciones</th>
+                                    <th>Acciones</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            <tbody>
+                        </table>
+                        <button class="btn btn-indigo" type="button">Ir a Diágnosticos</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- Sticky Navigation-->
+<div class="col-lg-3">
+    <div class="nav-sticky">
+        <div class="card">
+            <div class="card-body">
+                <ul class="nav flex-column" id="stickyNav">
+                    <li class="nav-item"><a class="nav-link" href="#datosPersonales">Datos Personales</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sintomas">Síntomas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sindrome">Síndromes genéticos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#condiciones">Condiciones previas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tratamientos">Tratamientos previos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#diagnostico">Diagnóstico</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<p>
+    <a class="btn btn-cyan me-2 my-1" href="~/Diagnostico/Index"><b><i data-feather="arrow-left-circle"></i>  Regresar</b></a>
+</p>
